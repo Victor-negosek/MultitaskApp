@@ -1,5 +1,7 @@
 .container {
   height: 100%;
+  display: flex;
+  justify-content: center;
 }
 .navbar {
   background-color: darkslategray;

@@ -7,20 +7,17 @@ import { UsaComponent } from './usa/usa.component';
 import { HomeComponent } from './home/home.component';
 import { PersonalComponent } from './personal/personal.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    UsaComponent,
-    HomeComponent,
-    PersonalComponent
-  ],
+  declarations: [AppComponent, UsaComponent, HomeComponent, PersonalComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatButtonModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
