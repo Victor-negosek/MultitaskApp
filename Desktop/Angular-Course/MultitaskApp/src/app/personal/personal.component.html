@@ -1,4 +1,4 @@
-<div class="box">
+<div class="box" *ngIf="genderData && ageData">
   <div class="upper-data">
     <img
       src="https://www.amateurphotographer.co.uk/wp-content/uploads/2022/03/Landscape-South-Island-New-Zealand-820x500.jpg"
@@ -10,13 +10,13 @@
       <div class="more-info">
         <img src="../assets/user.png" />
         <span>Name:</span>
-        <div class="more-info-value">Victor</div>
+        <div class="more-info-value">{{ genderData.name }}</div>
       </div>
 
       <div class="more-info">
         <img src="../assets/gender.png" />
         <span>Gender:</span>
-        <div class="more-info-value">Male</div>
+        <div class="more-info-value">{{ genderData.gender }}</div>
       </div>
     </div>
     <div class="more-info-container">
@@ -29,7 +29,7 @@
       <div class="more-info">
         <img src="../assets/age-range.png" />
         <span>Age:</span>
-        <div class="more-info-value">23</div>
+        <div class="more-info-value">{{ ageData.age }}</div>
       </div>
     </div>
   </div>

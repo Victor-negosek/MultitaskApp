@@ -10,7 +10,12 @@ export class PersonalService {
   constructor(private http: HttpClient) {}
 
   getGenderData(name: string): Observable<GenderData> {
-    return this.http.get<GenderData>('https://api.nationalize.io', {
+    return this.http.get<GenderData>('https://api.genderize.io', {
+      params: new HttpParams().set('name', name),
+    });
+  }
+  getAgeData(name: string): Observable<AgeData> {
+    return this.http.get<AgeData>('https://api.agify.io', {
       params: new HttpParams().set('name', name),
     });
   }
