@@ -1,7 +1,7 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { GenderData, AgeData } from '../models/personal.models';
+import { GenderData, AgeData, ImageData } from '../models/personal.models';
 
 @Injectable({
   providedIn: 'root',
@@ -18,5 +18,9 @@ export class PersonalService {
     return this.http.get<AgeData>('https://api.agify.io', {
       params: new HttpParams().set('name', name),
     });
+  }
+
+  getImageData(): Observable<ImageData> {
+    return this.http.get<ImageData>('https://dog.ceo/api/breeds/image/random');
   }
 }

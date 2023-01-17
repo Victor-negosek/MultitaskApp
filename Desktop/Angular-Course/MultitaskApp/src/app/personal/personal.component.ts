@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AgeData, GenderData } from '../models/personal.models';
+import { AgeData, GenderData, ImageData } from '../models/personal.models';
 import { PersonalService } from '../services/personal.service';
 
 @Component({
@@ -13,10 +13,19 @@ export class PersonalComponent implements OnInit {
   name: string = 'Lucy';
   genderData?: GenderData;
   ageData?: AgeData;
+  imageData?: ImageData;
 
   ngOnInit(): void {
     this.getGenderData(this.name);
     this.getAgeData(this.name);
+    this.getImageData();
+    this.name = '';
+  }
+
+  onSubmit() {
+    this.getGenderData(this.name);
+    this.getAgeData(this.name);
+    this.getImageData();
     this.name = '';
   }
 
@@ -32,6 +41,14 @@ export class PersonalComponent implements OnInit {
     this.personalService.getAgeData(name).subscribe({
       next: (response) => {
         this.ageData = response;
+      },
+    });
+  }
+
+  private getImageData() {
+    this.personalService.getImageData().subscribe({
+      next: (response) => {
+        this.imageData = response;
       },
     });
   }

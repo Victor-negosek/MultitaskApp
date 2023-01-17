@@ -10,3 +10,8 @@ export interface AgeData {
   count: number;
   name: string;
 }
+
+export interface ImageData {
+  status: string;
+  message: string;
+}

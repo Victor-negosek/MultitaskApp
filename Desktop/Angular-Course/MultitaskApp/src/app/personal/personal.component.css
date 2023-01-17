@@ -1,5 +1,4 @@
 .box {
-  margin-top: 5em;
   width: 750px;
   height: 80vh;
   background-color: var(--grey-1);
@@ -77,4 +76,19 @@
   padding-top: 6px;
   font-size: 1.8em;
   font-weight: 500;
+}
+
+.search {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.search input {
+  background-color: white;
+  outline: none;
+  border-radius: 10px;
+  padding: 1em;
+  font-size: 1em;
+  text-align: center;
 }
